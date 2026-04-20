@@ -3,10 +3,12 @@ package org.example.lab3.service;
 import org.example.lab3.model.NeighbourResponse;
 import org.example.lab3.model.NodeInfo;
 import org.example.lab3.storage.NodeRegistryStorage;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
 
+@Profile("naming-server")
 @Service
 public class NodeRegistry {
 

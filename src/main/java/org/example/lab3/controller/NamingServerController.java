@@ -5,9 +5,11 @@ import org.example.lab3.model.FileOwnerResponse;
 import org.example.lab3.model.NeighbourResponse;
 import org.example.lab3.model.NodeInfo;
 import org.example.lab3.service.NodeRegistry;
+import org.springframework.context.annotation.Profile;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+@Profile("naming-server")
 @RestController
 @RequestMapping("/api")
 public class NamingServerController {

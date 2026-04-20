@@ -4,6 +4,7 @@ import org.example.lab3.model.NodeInfo;
 import org.example.lab3.service.NodeRegistry;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
+import org.springframework.context.annotation.Profile;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
@@ -24,6 +25,7 @@ import java.nio.charset.StandardCharsets;
  *      The new node uses this count to decide whether it is alone (count == 0)
  *      or whether it should wait for neighbour info (count > 0).
  */
+@Profile("naming-server")
 @Component
 public class MulticastListener {
 
